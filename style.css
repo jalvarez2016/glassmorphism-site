@@ -1,0 +1,100 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+*::-webkit-scrollbar {
+    width: 0px;
+  }
+
+html, body, .backgroundImg-container {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#main-container, .fullpage-container {
+    width: 100%;
+    height: 100%;
+}
+
+.glass-container {
+    width: 300px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 5px;
+    backdrop-filter: blur(30px);
+    /* causes blur effect */
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    box-shadow: 10px 10px 10px rgba(44, 41, 38, 0.3);
+}
+
+.carapas {
+    background-image: url("images/received.jpeg");
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-glass-container {
+    width: 40%;
+    height: 40%;
+    text-align: center;
+}
+
+.main-glass-container p{
+    padding: 20px 0;
+}
+
+/* card flipping */
+.itm{
+    /* flex: 0 0 auto; */
+    text-align: center;
+    /* margin: 0px 15px;
+    margin-bottom: 40px; */
+    background-color: transparent;
+    perspective: 1000px;
+    /* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); */
+    /* box-shadow: 0px 0px 10px white; */
+  }
+
+  .itm-inner{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  .itm:hover .itm-inner{
+    transform: rotateY(180deg);
+  }
+  
+  .front, .back{
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    backface-visibility: hidden;
+  }
+  
+  .back{
+    transform: rotateY(180deg);
+  }
+
+  /* Nav stuff */
+  .nav-container{
+    /* height: inherit; */
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .nav-itm{
+      padding: 10px 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
